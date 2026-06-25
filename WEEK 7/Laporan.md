@@ -4,39 +4,11 @@
 
 UDP merupakan protokol komunikasi yang bekerja tanpa membangun koneksi terlebih dahulu (**connectionless**). Agar data dapat dikirim ke tujuan yang benar, pengirim harus menyertakan alamat IP dan nomor port tujuan pada setiap paket. Setelah paket diterima, sistem akan meneruskannya ke aplikasi yang sesuai berdasarkan nomor port yang digunakan. Selain alamat tujuan, paket juga memiliki informasi alamat sumber yang biasanya diatur secara otomatis oleh sistem operasi sehingga aplikasi tidak perlu menentukannya secara manual.
 
-### UDPClient.py
-
-Contoh kode dan penjelasan.
-
-### UDPServer.py
-
-Contoh kode dan penjelasan.
-
-### Output Program
-
-Menampilkan hasil komunikasi antara **UDP Client** dan **UDP Server**, yang menunjukkan bahwa data berhasil dikirim dan diterima melalui protokol UDP.
-
----
-
 ## Program Socket dengan TCP
 
 TCP adalah protokol yang bersifat **connection-oriented**, sehingga client dan server harus membangun koneksi terlebih dahulu sebelum melakukan pertukaran data. Proses tersebut dilakukan melalui mekanisme **three-way handshake** yang berjalan secara otomatis pada layer transport.
 
 Setelah koneksi berhasil dibuat, client dapat mengirim data tanpa perlu menyertakan alamat tujuan pada setiap proses pengiriman karena koneksi sudah terbentuk. Di sisi server, tersedia sebuah socket yang berfungsi menerima permintaan koneksi dari client. Ketika koneksi diterima, server akan membuat socket baru yang khusus digunakan untuk melayani client tersebut. Dengan mekanisme ini, TCP mampu menjamin pengiriman data secara berurutan, lengkap, dan lebih andal dibandingkan UDP.
-
-### TCPClient.py
-
-Contoh kode dan penjelasan.
-
-### TCPServer.py
-
-Contoh kode dan penjelasan.
-
-### Output Program
-
-Menampilkan hasil komunikasi antara **TCP Client** dan **TCP Server** setelah koneksi berhasil dibangun.
-
----
 
 ## Kesimpulan
 
